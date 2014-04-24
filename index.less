@@ -12,6 +12,7 @@
 @keyword: #cc7833;
 @literal: #a5c261;
 @literal-escaped: #519f50;
+@operator: lighten(@keyword, 30%);
 @punctuation: #b0c4de;
 @selection-bg: #5a647e;
 @symbol: #6d9cbe;
@@ -47,6 +48,10 @@
   color: @keyword;
 }
 
+.keyword.operator {
+  color: @operator;
+}
+
 .entity.name.function, .keyword.other.name-of-parameter.objc {
   color: @function;
 }
@@ -71,6 +76,10 @@
   color: @symbol;
 }
 
+.constant.variable.java {
+  color: @variable;
+}
+
 .variable.other.constant {
   color: @constant-decl;
 }
@@ -88,6 +97,14 @@
 }
 
 .support.type {
+  color: @type;
+}
+
+.storage.type {
+  color: @type;
+}
+
+.storage.modifier.import.java {
   color: @type;
 }
 
