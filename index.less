@@ -26,6 +26,18 @@
   color: @foreground;
 }
 
+.editor .git-commit.line-too-long.deprecated {
+  background: @background;
+  color: orange;
+  text-decoration: none;
+}
+
+.editor .git-commit.line-too-long.illegal {
+  background: @invalid-bg;
+  color: contrast(@invalid-bg);
+  opacity: 0.9;
+}
+
 .editor.is-focused .cursor {
   border-color: @white;
 }
