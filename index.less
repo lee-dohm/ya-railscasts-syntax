@@ -4,6 +4,7 @@
 @constant-decl: #da4939;
 @deleted-bg: #600;
 @diff-bg: #2f33ab;
+@error: red;
 @foreground: #e6e1dc;
 @function: #ffc66d;
 @inserted-bg: #144212;
@@ -12,6 +13,7 @@
 @keyword: #cc7833;
 @literal: #a5c261;
 @literal-escaped: #519f50;
+@nocolor: rgba(0, 0, 0, 0%);
 @operator: lighten(@keyword, 30%);
 @punctuation: #b0c4de;
 @selection-bg: #5a647e;
@@ -19,6 +21,7 @@
 @tag: #e8bf6a;
 @type: #6e9cbe;
 @variable: #d0d0ff;
+@warning: orange;
 @white: #fff;
 
 .editor, .editor .gutter, .zen .panes .pane {
@@ -26,25 +29,29 @@
   color: @foreground;
 }
 
-.editor .git-commit.line-too-long.deprecated {
-  background: @background;
-  color: orange;
-  text-decoration: none;
+.editor {
+  .git-commit.line-too-long.deprecated {
+    background: @nocolor;
+    color: @warning;
+  }
+
+  .git-commit.line-too-long.illegal {
+    background: @nocolor;
+    color: @error;
+  }
 }
 
-.editor .git-commit.line-too-long.illegal {
-  background: @invalid-bg;
-  color: contrast(@invalid-bg);
-  opacity: 0.9;
-}
+.editor.is-focused {
+  .cursor {
+    border-color: @white;
+  }
 
-.editor.is-focused .cursor {
-  border-color: @white;
-}
-
-.editor.is-focused .selection .region {
-  background-color: @selection-bg;
-  opacity: 0.88;
+  .selection {
+    .region {
+      background-color: @selection-bg;
+      opacity: 0.88;
+    }
+  }
 }
 
 .editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
