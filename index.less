@@ -1,187 +1,181 @@
-@background: #2b2b2b;
-@builtin: #da4939;
-@comment: #bc9458;
-@constant-decl: #da4939;
-@deleted-bg: #600;
-@diff-bg: #2f33ab;
-@error: red;
-@foreground: #e6e1dc;
-@function: #ffc66d;
-@inserted-bg: #144212;
-@invalid-bg: #900;
-@invisible: #404040;
-@keyword: #cc7833;
-@literal: #a5c261;
-@literal-escaped: #519f50;
-@nocolor: rgba(0, 0, 0, 0%);
-@operator: lighten(@keyword, 30%);
-@punctuation: #b0c4de;
-@selection-bg: #5a647e;
-@symbol: #6d9cbe;
-@tag: #e8bf6a;
-@type: #6e9cbe;
-@variable: #d0d0ff;
-@warning: orange;
-@white: #fff;
+@import 'colors';
 
-.editor, .editor .gutter, .zen .panes .pane {
-  background-color: @background;
-  color: @foreground;
+.bold {
+  font-weight: bold;
 }
 
-.editor {
-  .git-commit.line-too-long.deprecated {
-    background: @nocolor;
-    color: @warning;
-  }
+.comment {
+  font-style: italic;
+  color: @comment-color;
+}
 
-  .git-commit.line-too-long.illegal {
-    background: @nocolor;
-    color: @error;
-  }
+.constant {
+  color: @symbol-color;
+}
+
+.constant.language {
+  color: @type-color;
+}
+
+.constant.numeric {
+  color: @literal-color;
+}
+
+.constant.variable.java {
+  color: @variable-color;
+}
+
+.constant.character.escaped, .constant.character.escape {
+  color: @literal-escaped-color;
+}
+
+.editor, .editor .gutter, .zen .panes .pane {
+  background-color: @background-color;
+  color: @foreground-color;
 }
 
 .editor.is-focused {
   .cursor {
-    border-color: @white;
+    border-color: @white-color;
+  }
+
+  .line.cursor-line {
+    background-color: @line-highlight-color;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @line-highlight-color;
   }
 
   .selection {
     .region {
-      background-color: @selection-bg;
+      background-color: @selection-bg-color;
       opacity: 0.88;
     }
   }
 }
 
-.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
-  background-color: lighten(@background, 8%);
-}
-
-.comment {
-  font-style: italic;
-  color: @comment;
-}
-
-.keyword, .storage {
-  color: @keyword;
-}
-
-.keyword.operator {
-  color: @operator;
+.entity.name {
+  color: @white-color;
 }
 
 .entity.name.function, .keyword.other.name-of-parameter.objc {
-  color: @function;
+  color: @function-color;
 }
 
-.entity.name {
-  color: @white;
+.git-commit.line-too-long.deprecated {
+  background: @no-color;
+  color: @warning-color;
 }
 
-.constant.numeric {
-  color: @literal;
+.git-commit.line-too-long.illegal {
+  background: @no-color;
+  color: @error-color;
 }
 
-.variable {
-  color: @variable;
-}
-
-.variable.language, .variable.other {
-  color: @variable;
-}
-
-.constant {
-  color: @symbol;
-}
-
-.constant.variable.java {
-  color: @variable;
-}
-
-.variable.other.constant {
-  color: @constant-decl;
-}
-
-.constant.language {
-  color: @type;
-}
-
-.string {
-  color: @literal;
-}
-
-.support.function {
-  color: @builtin;
-}
-
-.support.type {
-  color: @type;
-}
-
-.storage.type {
-  color: @type;
-}
-
-.storage.modifier.import.java {
-  color: @type;
-}
-
-.support.constant {
-  color: @literal;
-}
-
-.punctuation.section.embedded, .punctuation.section.embedded .source.ruby {
-  color: @punctuation;
-}
-
-.meta.tag, .declaration.tag, .entity.name.tag, .entity.other.attribute-name {
-  color: @tag;
+.git-config.subsection {
+  color: @literal-color;
 }
 
 .invalid {
-  background-color: @invalid-bg;
-  color: contrast(@invalid-bg);
-}
-
-.constant.character.escaped, .constant.character.escape, .string .source, .string .source.ruby {
-  color: @literal-escaped;
-}
-
-.markup.inserted {
-  color: contrast(@inserted-bg, #000, @foreground);
-  background-color: @inserted-bg;
-}
-
-.markup.deleted {
-  color: contrast(@deleted-bg, #000, @foreground);
-  background-color: @deleted-bg;
-}
-
-.markup.heading {
-  color: @tag;
-}
-
-.markup.raw {
-  color: @literal;
-}
-
-.markup.underline.link.gfm {
-  color: @variable;
-}
-
-.link {
-  color: @literal;
-}
-
-.link .entity {
-  color: @symbol;
-}
-
-.meta.diff.header, .meta.separator.diff, .meta.diff.index, .meta.diff.range {
-  background-color: @diff-bg;
+  background-color: @invalid-bg-color;
+  color: contrast(@invalid-bg-color);
 }
 
 .invisible-character {
-  color: @invisible;
+  color: @invisible-color;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.keyword {
+  color: @keyword-color;
+}
+
+.keyword.operator {
+  color: @operator-color;
+}
+
+.link {
+  color: @literal-color;
+}
+
+.link .entity {
+  color: @symbol-color;
+}
+
+.markup.deleted {
+  color: contrast(@deleted-bg-color, #000, @foreground-color);
+  background-color: @deleted-bg-color;
+}
+
+.markup.heading {
+  color: @tag-color;
+}
+
+.markup.inserted {
+  color: contrast(@inserted-bg-color, #000, @foreground-color);
+  background-color: @inserted-bg-color;
+}
+
+.markup.raw {
+  color: @literal-color;
+}
+
+.markup.underline.link.gfm {
+  color: @variable-color;
+}
+
+.meta.diff.header, .meta.separator.diff, .meta.diff.index, .meta.diff.range {
+  background-color: @diff-bg-color;
+}
+
+.meta.tag, .declaration.tag, .entity.name.tag, .entity.other.attribute-name {
+  color: @tag-color;
+}
+
+.punctuation.section.embedded, .punctuation.section.embedded .source.ruby {
+  color: @punctuation-color;
+}
+
+.storage {
+  color: @keyword-color;
+}
+
+.storage.type {
+  color: @type-color;
+}
+
+.storage.modifier.import.java {
+  color: @type-color;
+}
+
+.string {
+  color: @literal-color;
+}
+
+.string .source, .string .source.ruby {
+  color: @literal-escaped-color;
+}
+
+.support.function {
+  color: @builtin-color;
+}
+
+.support.type {
+  color: @type-color;
+}
+
+.support.constant {
+  color: @literal-color;
+}
+
+.variable, .variable.language, .variable.other {
+  color: @variable-color;
+}
+
+.variable.other.constant {
+  color: @constant-decl-color;
 }
