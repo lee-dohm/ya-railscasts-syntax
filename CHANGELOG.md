@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## **master**
+## **v0.4.0** &mdash; *Released: 27 June 2014*
 
 * Added coloration for `.git-config.subsection`
 * :lipstick: Reordered the entire stylesheet to make rules easier to find
