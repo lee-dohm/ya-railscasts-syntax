@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## **v0.4.1** &mdash; *Released: 3 August 2014*
+
+* Updated the punctuation and operator color to be more distinct
+* Switched to the Base16 Railscasts color palette where possible
+
 ## **v0.4.0** &mdash; *Released: 27 June 2014*
 
 * Added coloration for `.git-config.subsection`

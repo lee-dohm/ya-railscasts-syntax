@@ -1,26 +1,43 @@
-@background-color: #2b2b2b;
-@builtin-color: #da4939;
-@comment-color: #bc9458;
-@constant-decl-color: #da4939;
+// From https://github.com/chriskempson/base16-builder/blob/master/schemes/railscasts.yml
+@base00: #2b2b2b;
+@base01: #272935;   // not used
+@base02: #3a4055;   // not used
+@base03: #5a647e;
+@base05: #e6e1dc;
+@base06: #f4f1ed;   // not used
+@base07: #f9f7f3;   // not used
+@base08: #da4939;
+@base09: #cc7833;
+@base0A: #ffc66d;
+@base0B: #a5c261;
+@base0C: #519f50;
+@base0D: #6d9cbe;
+@base0E: #b6b3eb;
+@base0F: #bc9458;
+
+@background-color: @base00;
+@builtin-color: @base08;
+@comment-color: @base0F;
+@constant-decl-color: @base08;
 @deleted-bg-color: #600;
 @diff-bg-color: #2f33ab;
 @error-color: red;
-@foreground-color: #e6e1dc;
-@function-color: #ffc66d;
+@foreground-color: @base05;
+@function-color: @base0A;
 @inserted-bg-color: #144212;
 @invalid-bg-color: #900;
 @invisible-color: #404040;
-@keyword-color: #cc7833;
+@keyword-color: @base09;
 @line-highlight-color: lighten(@background-color, 8%);
-@literal-color: #a5c261;
-@literal-escaped-color: #519f50;
+@literal-color: @base0B;
+@literal-escaped-color: @base0C;
 @no-color: rgba(0, 0, 0, 0%);
-@operator-color: #b0c4de;
-@punctuation-color: #b0c4de;
-@selection-bg-color: #5a647e;
-@symbol-color: #6d9cbe;
+@operator-color: @base0E;
+@punctuation-color: @base0E;
+@selection-bg-color: @base03;
+@symbol-color: @base0D;
 @tag-color: #e8bf6a;
-@type-color: #6d9cbe;
+@type-color: @base0D;
 @variable-color: #d0d0ff;
 @warning-color: orange;
 @white-color: #fff;
