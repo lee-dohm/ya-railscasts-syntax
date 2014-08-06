@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **v0.4.2** &mdash; *Released: 6 August 2014*
+
+* Add a better flash highlight color (yellow) for find-and-replace results
+
 ## **v0.4.1** &mdash; *Released: 3 August 2014*
 
 * Updated the punctuation and operator color to be more distinct
