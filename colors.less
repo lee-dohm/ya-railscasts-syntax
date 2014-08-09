@@ -5,7 +5,7 @@
 @base03: #5a647e;
 @base05: #e6e1dc;
 @base06: #f4f1ed;   // not used
-@base07: #f9f7f3;   // not used
+@base07: #f9f7f3;
 @base08: #da4939;
 @base09: #cc7833;
 @base0A: #ffc66d;
@@ -19,6 +19,7 @@
 @builtin-color: @base08;
 @comment-color: @base0F;
 @constant-decl-color: @base08;
+@cursor-color: white;
 @deleted-bg-color: #600;
 @diff-bg-color: #2f33ab;
 @error-color: red;
@@ -31,6 +32,7 @@
 @line-highlight-color: lighten(@background-color, 8%);
 @literal-color: @base0B;
 @literal-escaped-color: @base0C;
+@name-color: @base07;
 @no-color: rgba(0, 0, 0, 0%);
 @operator-color: @base0E;
 @punctuation-color: @base0E;
@@ -40,6 +42,9 @@
 @type-color: @base0D;
 @variable-color: #d0d0ff;
 @warning-color: orange;
-@white-color: #fff;
 
-@syntax-selection-flash-color: #ff0;
+@attention-color: yellow;
+@syntax-selection-flash-color: @attention-color;
+
+@hints-color: #c5c8c6;
+@hints-opacity: 0.3;

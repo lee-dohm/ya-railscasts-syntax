@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'mixins';
 
 .bold {
   font-weight: bold;
@@ -34,9 +35,15 @@
   color: @foreground-color;
 }
 
+.editor {
+  .bracket-matcher {
+    border: 1px solid @attention-color;
+  }
+}
+
 .editor.is-focused {
   .cursor {
-    border-color: @white-color;
+    border-color: @cursor-color;
   }
 
   .line.cursor-line {
@@ -56,7 +63,7 @@
 }
 
 .entity.name {
-  color: @white-color;
+  color: @name-color;
 }
 
 .entity.name.function, .keyword.other.name-of-parameter.objc {
@@ -64,13 +71,11 @@
 }
 
 .git-commit.line-too-long.deprecated {
-  background: @no-color;
-  color: @warning-color;
+  .warning-text;
 }
 
 .git-commit.line-too-long.illegal {
-  background: @no-color;
-  color: @error-color;
+  .error-text;
 }
 
 .git-config.subsection {
@@ -83,7 +88,11 @@
 }
 
 .invisible-character {
-  color: @invisible-color;
+  .hints;
+}
+
+.indent-guide {
+  .hints;
 }
 
 .italic {
@@ -172,12 +181,24 @@
   color: @literal-color;
 }
 
+.trailing-whitespace.invisible-character {
+  .error-text;
+}
+
+.unit.css {
+  color: @operator-color;
+}
+
 .variable, .variable.language, .variable.other {
   color: @variable-color;
 }
 
 .variable.other.constant {
   color: @constant-decl-color;
+}
+
+.wrap-guide {
+  .hints;
 }
 
 // --- Non-syntax Editor Styles ---
