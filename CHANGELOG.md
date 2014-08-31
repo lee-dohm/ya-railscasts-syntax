@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **v0.5.0** &mdash; *Released: 31 August 2014*
+
+* Add support for YARD document comment highlighting in Ruby
+
 ## **v0.4.2** &mdash; *Released: 6 August 2014*
 
 * Add a better flash highlight color (yellow) for find-and-replace results
