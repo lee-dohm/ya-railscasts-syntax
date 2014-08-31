@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## **v0.5.0** &mdash; *Released: 31 August 2014*
+## **v0.6.0** &mdash; *Released: 31 August 2014*
 
 * Add support for YARD document comment highlighting in Ruby
 
