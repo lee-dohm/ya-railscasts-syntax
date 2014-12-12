@@ -30,18 +30,18 @@
   color: @literal-escaped-color;
 }
 
-.editor, .editor .gutter, .zen .panes .pane {
+.editor,
+.zen .panes .pane,
+atom-text-editor::shadow {
   background-color: @background-color;
   color: @foreground-color;
 }
 
-.editor {
-  .bracket-matcher {
-    border: 1px solid @attention-color;
-  }
+.editor .gutter, atom-text-editor::shadow .gutter {
+  background-color: lighten(@background-color, 8%);
 }
 
-.editor.is-focused {
+.editor.is-focused, atom-text-editor::shadow.is-focused {
   .cursor {
     border-color: @cursor-color;
   }
@@ -222,8 +222,10 @@
   }
 }
 
-.editor .flash.selection .region {
-  -webkit-animation-name: flash;
-  -webkit-animation-duration: 1.0s;
-  -webkit-animation-iteration-count: 1;
+.editor, atom-text-editor::shadow {
+  .flash.selection .region {
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 1.0s;
+    -webkit-animation-iteration-count: 1;
+  }
 }
